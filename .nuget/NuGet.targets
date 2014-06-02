@@ -23,6 +23,11 @@
             <PackageSource Include="https://www.nuget.org/api/v2/" />
             <PackageSource Include="https://my-nuget-source/nuget/" />
         -->
+      <PackageSource Include="https://nuget.org/api/v2/" />
+      <PackageSource Include="\\telerik.com\resources\NuGet" />
+      <PackageSource Include="\\telerik.com\resources\WebDivision\nuget" />
+      <PackageSource Include="\\telerik.com\resources\Controls\DISTRIBUTIONS\Lean\NuGet-PreRelease" />
+      <PackageSource Include="\\telerik.com\resources\Controls\DISTRIBUTIONS\Sitefinity\nuget" />
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(OS)' == 'Windows_NT'">

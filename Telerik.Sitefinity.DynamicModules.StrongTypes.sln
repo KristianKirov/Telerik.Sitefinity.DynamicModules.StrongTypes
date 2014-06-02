@@ -3,16 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.DynamicModules.StrongTypes", "Telerik.Sitefinity.DynamicModules.StrongTypes\Telerik.Sitefinity.DynamicModules.StrongTypes.csproj", "{157550E8-C949-411D-917C-81D0B5B3A84E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{11CFFBAE-68C4-4EDD-AAB2-087664871E8A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityWebApp", "SitefinityWebApp\SitefinityWebApp.csproj", "{3E598CFC-83B2-494A-A97F-32EB24D797C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{157550E8-C949-411D-917C-81D0B5B3A84E} = {157550E8-C949-411D-917C-81D0B5B3A84E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release Pro|Any CPU = Release Pro|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{157550E8-C949-411D-917C-81D0B5B3A84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{157550E8-C949-411D-917C-81D0B5B3A84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157550E8-C949-411D-917C-81D0B5B3A84E}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
+		{157550E8-C949-411D-917C-81D0B5B3A84E}.Release Pro|Any CPU.Build.0 = Release|Any CPU
 		{157550E8-C949-411D-917C-81D0B5B3A84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157550E8-C949-411D-917C-81D0B5B3A84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release Pro|Any CPU.ActiveCfg = Release Pro|Any CPU
+		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release Pro|Any CPU.Build.0 = Release Pro|Any CPU
+		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

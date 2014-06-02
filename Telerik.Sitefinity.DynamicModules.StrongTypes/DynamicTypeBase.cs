@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.DynamicModules.Model;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Data;
 using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Libraries.Model;
 using Telerik.Sitefinity.Model;
+using Telerik.Sitefinity.RelatedData;
 
 namespace Telerik.Sitefinity.DynamicModules.StrongTypes
 {
@@ -14,7 +16,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes
     {
         protected internal DynamicContent DynamicContent { get; private set; }
 
-        internal DynamicTypeBase()
+        protected internal DynamicTypeBase()
         {
         }
 
@@ -23,7 +25,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes
             this.DynamicContent = dynamicContent;
         }
 
-        protected T GetDynamicFieldValue<T>(string fieldName)
+        protected internal T GetDynamicFieldValue<T>(string fieldName)
         {
             return this.DynamicContent.GetValue<T>(fieldName);
         }
@@ -86,6 +88,58 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes
         protected void ClearFiles(string fieldName)
         {
             this.DynamicContent.ClearFiles(fieldName);
+        }
+
+        protected IList<T> GetRelatedDynamicItems<T>(string fieldName) where T : DynamicTypeBase, new()
+        {
+            IList<DynamicContent> relatedItems = this.GetDynamicFieldValue<IList<DynamicContent>>(fieldName);
+            if (relatedItems == null)
+            {
+                return null;
+            }
+
+            IDynamicTypeConverter converter = new DynamicTypeConverter();
+
+            return relatedItems.Select(dc => converter.BuildTypedItem<T>(dc)).ToList();
+        }
+
+        protected T GetRelatedDynamicItem<T>(string fieldName) where T : DynamicTypeBase, new()
+        {
+            DynamicContent relatedItem = this.GetDynamicFieldValue<DynamicContent>(fieldName);
+            if (relatedItem == null)
+            {
+                return null;
+            }
+
+            IDynamicTypeConverter converter = new DynamicTypeConverter();
+
+            return converter.BuildTypedItem<T>(relatedItem);
+        }
+
+        protected void AddRelatedItem(string fieldName, DynamicTypeBase relatedItem)
+        {
+            this.AddRelatedItem(fieldName, relatedItem.DynamicContent);
+        }
+
+        protected void SetRelatedItem(string fieldName, DynamicTypeBase relatedItem)
+        {
+            this.SetRelatedItem(fieldName, relatedItem.DynamicContent);
+        }
+
+        protected void AddRelatedItem(string fieldName, IDataItem relatedItem)
+        {
+            this.DynamicContent.CreateRelation(relatedItem, fieldName);
+        }
+
+        protected void SetRelatedItem(string fieldName, IDataItem relatedItem)
+        {
+            this.DynamicContent.DeleteRelations(fieldName);
+            this.DynamicContent.CreateRelation(relatedItem, fieldName);
+        }
+
+        protected void ClearRelatedItems(string fieldName)
+        {
+            this.DynamicContent.DeleteRelations(fieldName);
         }
 
         public Guid Id

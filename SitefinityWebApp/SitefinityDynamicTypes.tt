@@ -1,0 +1,545 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="Microsoft.VisualStudio.Shell.Interop" #>
+<#@ assembly name="EnvDTE" #>
+<#@ assembly name="EnvDTE80" #>
+<#@ assembly name="VSLangProj" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="Microsoft.VisualStudio.Shell.Interop" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="EnvDTE80" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ import namespace="System.Xml" #>
+<#@ output extension=".cs" #>
+<#    PrepareData(); #>
+using System;
+using System.Collections.Generic;
+using Telerik.Sitefinity.Model;
+using Telerik.Sitefinity.DynamicModules.Model;
+using Telerik.Sitefinity.Model.ContentLinks;
+using Telerik.Sitefinity.GeoLocations.Model;
+using Telerik.Sitefinity.Libraries.Model;
+using Telerik.Sitefinity.DynamicModules.StrongTypes;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Data;
+
+namespace <#= DefaultNamespace #>
+{
+<#    foreach (DynamicTypeModel dynamicType in DynamicTypes)
+{ #>
+    namespace <#= dynamicType.Namespace #>
+    {
+        public class <#= dynamicType.Name #> : DynamicTypeBase
+        {
+            public const string MAIN_SHORT_TEXT_FIELD_NAME = "<#= dynamicType.MainShortTextFieldName #>";
+            public const string DYNAMIC_TYPE_NAME = "<#= dynamicType.SitefinityTypeName #>";
+            
+            public <#= dynamicType.Name #>()
+            {
+            }
+
+    <# foreach (DynamicTypeFieldModel field in dynamicType.Fields)
+{ #>
+        private const string <#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME = "<#= field.FieldName #>";
+            public <#= field.ClrTypeShortName #> <#= field.FieldName #>
+            {
+                get
+                {
+                    <#
+            if (field.IsDynamicRelatedField)
+            {
+                #>
+                    return this.GetRelatedDynamicItem<#= field.CanSelectMultipleItems ? "s" : "" #><<#= field.SingleItemTypeShortName #>>(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+                <#
+            }
+            else
+            {
+                    #>
+                    return this.GetDynamicFieldValue<<#= field.ClrTypeShortName #>>(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+                <#
+            }
+                #>
+                }
+                <# if (field.CanSet) { #>
+set
+                {
+                    this.SetDynamicFieldValue(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, <#= field.ClrTypeShortName == "Lstring" ? "value.Value" : "value" #>);
+                }
+                <# } #>
+}
+
+<# if (field.UseCustomSetMethod)
+{
+                switch (field.SitefinityType)
+                {
+                    case FieldType.Classification:
+                        if (field.CanSelectMultipleItems)
+                        {
+#>
+    public void Add<#= field.FieldName #>(<#= field.SingleItemTypeShortName #> taxonIds)
+    {
+        this.AddClassificationValue(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, taxonIds);
+    }
+<#
+                        }
+                        else
+                        {
+#>
+    public void Set<#= field.FieldName #>(<#= field.SingleItemTypeShortName #> taxonId)
+    {
+        //Do we need it?
+        this.ClearClassificationField(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+
+        this.AddClassificationValue(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, taxonId);
+    }
+<#
+                        }
+#>
+    public void Clear<#= field.FieldName #>()
+    {
+        this.ClearClassificationField(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+    }
+<#
+                        break;
+                    case FieldType.Choices:
+#>
+    public void Set<#= field.FieldName #>(<#= field.SingleItemTypeShortName #> <#= field.CanSelectMultipleItems ? "selectedOptions" : "selectedOption" #>)
+    {
+        this.SetDynamicFieldValue(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, <#= field.CanSelectMultipleItems ? "selectedOptions" : "selectedOption" #>);
+    }
+<#
+                        break;
+                    case FieldType.RelatedMedia:
+                    case FieldType.Media:
+                        if (field.MediaType != MediaType.None)
+                        {
+                            string mediaTypePrefix = field.MediaType.ToString();
+                            string modelTypeName = field.MediaType == MediaType.File ? "Document" : mediaTypePrefix;
+                            string lowerMediaType = mediaTypePrefix.ToLowerInvariant();
+                            string setMethodPrefix = field.CanSelectMultipleItems ? "Add" : "Set";
+#>
+    public void <#= setMethodPrefix #><#= field.FieldName #>(<#= field.SingleItemTypeShortName #> <#= lowerMediaType #>Id, string librariesProviderName = "")
+    {
+<#
+                            if (!field.CanSelectMultipleItems)
+                            {
+#>
+    this.Clear<#= field.FieldName #>();
+<#
+                            }
+#>
+    this.Add<#= mediaTypePrefix #>Value(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, <#= lowerMediaType #>Id, librariesProviderName);
+    }
+
+    public void <#= setMethodPrefix #><#= field.FieldName #>(<#= modelTypeName #> <#= lowerMediaType #>)
+    {
+<#
+                            if (!field.CanSelectMultipleItems)
+                            {
+#>
+    this.Clear<#= field.FieldName #>();
+<#
+                            }
+#>
+    this.Add<#= mediaTypePrefix #>Value(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, <#= lowerMediaType #>);
+    }
+
+    public void Clear<#= field.FieldName #>()
+    {
+        this.Clear<#= mediaTypePrefix #>s(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+    }
+<#
+                        }
+
+                        break;
+                    case FieldType.RelatedData:
+                        if (field.CanSelectMultipleItems)
+                        {
+#>
+    public void Add<#= field.FieldName #>(<#= field.SingleItemTypeShortName #> relatedItem)
+    {
+        this.AddRelatedItem(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, relatedItem);
+    }
+<#
+                        }
+                        else
+                        {
+#>
+    public void Set<#= field.FieldName #>(<#= field.SingleItemTypeShortName #> relatedItem)
+    {
+        this.SetRelatedItem(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, relatedItem);
+    }
+<#
+                        }
+#>
+    public void Clear<#= field.FieldName #>()
+    {
+        this.ClearRelatedItems(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+    }
+<#
+
+                        break;
+
+                }
+}
+#>
+    <#    } #>
+    }
+
+    namespace Data
+    {
+        public partial class <#= dynamicType.Name #>DataRepository : DynamicItemsRepositoryBase<<#= dynamicType.Name #>>
+        {
+            public override string ItemTypeName
+            {
+                get
+                {
+                    return <#= dynamicType.Name #>.DYNAMIC_TYPE_NAME;
+                }
+            }
+        }
+    }
+
+    }
+<#    } #>
+
+}
+<#+
+
+    static DTE Dte;
+    static Project SitefinityWebAppProject;
+    static ProjectItem DataConfig;
+    string DefaultNamespace;
+    IEnumerable<DynamicTypeModel> DynamicTypes;
+
+    void PrepareData()
+    {
+        // Get the DTE service from the host
+        var serviceProvider = Host as IServiceProvider;
+        if (serviceProvider != null)
+        {
+            Dte = (EnvDTE.DTE)serviceProvider.GetService(typeof(EnvDTE.DTE));
+        }
+
+        // Fail if we couldn't get the DTE. This can happen when trying to run in TextTransform.exe
+        if (Dte == null)
+        {
+            throw new Exception("T4MVC can only execute through the Visual Studio host");
+        }
+
+        FindSitefinityWebAppProjectAndRequiredConfigs();
+        DynamicTypes = GetDynamicTypesData();
+
+        ProjectItem templateFileProjectItem = Dte.Solution.FindProjectItem(Host.TemplateFile);
+        Project templateFileProject = templateFileProjectItem.ContainingProject;
+        DefaultNamespace = templateFileProject.Properties.Item("DefaultNamespace").Value.ToString();
+    }
+
+    void FindSitefinityWebAppProjectAndRequiredConfigs()
+    {
+        DataConfig = Dte.Solution.FindProjectItem("DataConfig.config");
+        SitefinityWebAppProject = DataConfig.ContainingProject;
+    }
+
+    IEnumerable<DynamicTypeModel> GetDynamicTypesData()
+    {
+        string dataConfigFullName = DataConfig.FileNames[0];
+
+        XmlDocument dataConfigXmlDocument = new XmlDocument();
+        dataConfigXmlDocument.Load(dataConfigFullName);
+
+        XmlNode stefinityConnectionStringNode = dataConfigXmlDocument.DocumentElement.SelectSingleNode("/dataConfig/connectionStrings/add[@name=\"Sitefinity\"]");
+        string sitefinityConnectionString = stefinityConnectionStringNode.Attributes["connectionString"].Value;
+        
+        List<DynamicTypeModel> dynamicTypesModels = new List<DynamicTypeModel>();
+        using (SqlConnection sfSqlConnection= new SqlConnection(sitefinityConnectionString))
+        {
+            sfSqlConnection.Open();
+            Dictionary<Guid, DynamicTypeModel> dynamicTypesModelsDictionary = new Dictionary<Guid, DynamicTypeModel>();
+            using (SqlCommand selectDynamicTypesCommand = sfSqlConnection.CreateCommand())
+            {
+                selectDynamicTypesCommand.CommandText = "select * from [dbo].[sf_mb_dynamic_module_type]";
+                using (var dynamicTypesReader = selectDynamicTypesCommand.ExecuteReader())
+                {
+                    while (dynamicTypesReader.Read())
+                    {
+                        Guid typeId = (Guid)dynamicTypesReader["id"];
+                        string typeName = (string)dynamicTypesReader["type_name"];
+                        string mainShortTextFieldName = (string)dynamicTypesReader["main_short_text_field_name"];
+                        string typeNamespace = (string)dynamicTypesReader["type_namespace"];
+
+                        DynamicTypeModel dynamicTypeModel = new DynamicTypeModel(typeName, mainShortTextFieldName, typeNamespace);
+
+                        dynamicTypesModelsDictionary.Add(typeId, dynamicTypeModel);
+                        dynamicTypesModels.Add(dynamicTypeModel);
+                    }
+                }
+            }
+
+            using (SqlCommand selectDynamicTypeFieldsCommand = sfSqlConnection.CreateCommand())
+            {
+                selectDynamicTypeFieldsCommand.CommandText = "select * from [dbo].[sf_mb_dynamic_module_field] where field_type <> 0";
+                using (SqlDataReader dynamicTypeFieldsReader = selectDynamicTypeFieldsCommand.ExecuteReader())
+                {
+                    while (dynamicTypeFieldsReader.Read())
+                    {
+                        Guid parentTypeId = (Guid)dynamicTypeFieldsReader["parent_type_id"];
+
+                        DynamicTypeFieldModel newField = new DynamicTypeFieldModel(dynamicTypeFieldsReader);
+                        DynamicTypeModel parentTypeModel = dynamicTypesModelsDictionary[parentTypeId];
+                        parentTypeModel.Fields.Add(newField);
+                    }
+                }
+            }
+        }
+
+        return dynamicTypesModels;
+    }
+
+    public static T ConvertFromDBVal<T>(object obj)
+    {
+        if (obj == null || obj == DBNull.Value)
+        {
+            return default(T); // returns the default value for the type
+        }
+        else
+        {
+            return (T)obj;
+        }
+    }
+
+    class DynamicTypeModel
+    {
+        public string Name { get; private set; }
+        public string MainShortTextFieldName { get; private set; }
+        public string Namespace { get; private set; }
+        public string SitefinityTypeName { get; private set; }
+        public List<DynamicTypeFieldModel> Fields { get; private set; }
+
+        public DynamicTypeModel(string name, string mainShortTextFieldName, string sitefinityTypeNamespace)
+        {
+            this.Name = name;
+            this.MainShortTextFieldName = mainShortTextFieldName;
+            this.Namespace = sitefinityTypeNamespace.Substring("Telerik.Sitefinity.DynamicTypes.Model.".Length); //removes "Telerik.Sitefinity.DynamicTypes.Model." from the sitefinity namespace
+            this.Fields = new List<DynamicTypeFieldModel>();
+            this.SitefinityTypeName = string.Concat(sitefinityTypeNamespace, ".", this.Name);
+        }
+    }
+    
+    //TODO: Store taxonomy type, choices options, parent type name, Validation (required, range), Render descriptions as XML comments, Format taxonomies field names
+    class DynamicTypeFieldModel
+    {
+        public string FieldName { get; private set; }
+        public string ClrTypeShortName { get; private set; }
+        public string SingleItemTypeShortName { get; private set; }
+        public bool CanSet { get; private set; }
+        public FieldType SitefinityType { get; private set; }
+        public bool UseCustomSetMethod { get; private set; }
+        public bool CanSelectMultipleItems { get; private set; }
+        public MediaType MediaType { get; private set; }
+        public bool IsDynamicRelatedField { get; private set; }
+
+        public DynamicTypeFieldModel(SqlDataReader fieldRowReader)
+        {
+            bool isLocalizable = ((byte)fieldRowReader["is_localizable"] != 0);
+
+            this.FieldName = (string)fieldRowReader["nme"];;
+            this.SitefinityType = (FieldType)fieldRowReader["field_type"];
+            this.MediaType = this.ParseMediaType(ConvertFromDBVal<string>(fieldRowReader["media_type"]));
+
+            if (this.SitefinityType == FieldType.Choices || this.SitefinityType == FieldType.Classification || this.SitefinityType == FieldType.RelatedData)
+            {
+                this.CanSelectMultipleItems = ((byte)fieldRowReader["can_select_multiple_items"] != 0);
+            }
+            else  if ((this.SitefinityType == FieldType.Media || this.SitefinityType == FieldType.RelatedMedia) && this.MediaType != MediaType.None)
+            {
+                if (this.MediaType == MediaType.Image)
+                {
+                    this.CanSelectMultipleItems = ((byte)fieldRowReader["allow_multiple_images"] != 0);
+                }
+                else if (this.MediaType == MediaType.Video)
+                {
+                    this.CanSelectMultipleItems = ((byte)fieldRowReader["allow_multiple_videos"] != 0);
+                }
+                else if (this.MediaType == MediaType.File)
+                {
+                    this.CanSelectMultipleItems = ((byte)fieldRowReader["allow_multiple_files"] != 0);
+                }
+            }
+
+            switch (this.SitefinityType)
+            {
+                case FieldType.ShortText:
+                case FieldType.LongText:
+                    if (isLocalizable)
+                    {
+                        this.ClrTypeShortName = "Lstring";
+                    }
+                    else
+                    {
+                        this.ClrTypeShortName = "string";
+                    }
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "string";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.Classification:
+                    this.ClrTypeShortName = "IEnumerable<Guid>";
+                    this.CanSet = false;
+                    this.SingleItemTypeShortName = "params Guid[]";
+                    this.UseCustomSetMethod = true;
+                    break;
+                case FieldType.Currency:
+                    this.ClrTypeShortName = "decimal";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "decimal";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.DateTime:
+                    this.ClrTypeShortName = "DateTime";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "DateTime";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.MultipleChoice:
+                    this.ClrTypeShortName = "string[]";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "string[]";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.Choices:
+                    this.ClrTypeShortName = this.CanSelectMultipleItems ? "ChoiceOption[]" : "ChoiceOption";
+                    this.CanSet = false;
+                    this.SingleItemTypeShortName = this.CanSelectMultipleItems ? "string[]" : "string";
+                    this.UseCustomSetMethod = true;
+                    break;
+                case FieldType.Number:
+                    this.ClrTypeShortName = "decimal";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "decimal";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.Unknown:
+                    this.ClrTypeShortName = "string";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "string";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.YesNo:
+                    this.ClrTypeShortName = "bool";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "bool";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.RelatedMedia:
+                case FieldType.Media:
+                    this.ClrTypeShortName = "ContentLink[]";
+                    this.CanSet = false;
+                    this.SingleItemTypeShortName = "Guid";
+                    this.UseCustomSetMethod = true;
+                    break;
+                case FieldType.Guid:
+                    this.ClrTypeShortName = "Guid";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "Guid";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.GuidArray:
+                    this.ClrTypeShortName = "Guid[]";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "Guid";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.Address:
+                    this.ClrTypeShortName = "Address";
+                    this.CanSet = true;
+                    this.SingleItemTypeShortName = "Address";
+                    this.UseCustomSetMethod = false;
+                    break;
+                case FieldType.RelatedData:
+                    string relatedTypeName = (string)fieldRowReader["related_data_type"];
+                    if (relatedTypeName.StartsWith("Telerik.Sitefinity.DynamicTypes.Model", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        relatedTypeName = relatedTypeName.Substring("Telerik.Sitefinity.DynamicTypes.Model.".Length);
+                        this.IsDynamicRelatedField = true;
+                    }
+                    
+                    if (this.CanSelectMultipleItems)
+                    {
+                        this.ClrTypeShortName = string.Concat("IList<", relatedTypeName, ">");
+                    }
+                    else
+                    {
+                        this.ClrTypeShortName = relatedTypeName;
+                    }
+
+                    this.CanSet = false;
+                    this.SingleItemTypeShortName = relatedTypeName;
+                    this.UseCustomSetMethod = true;
+                    break;
+                default:
+                    throw new NotSupportedException();
+            }
+        }
+
+        MediaType ParseMediaType(string mediaType)
+        {
+            if (string.IsNullOrEmpty(mediaType))
+            {
+                return MediaType.None;
+            }
+
+            if (mediaType.Equals("image", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return MediaType.Image;
+            }
+
+            if (mediaType.Equals("video", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return MediaType.Video;
+            }
+
+            if (mediaType.Equals("file", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return MediaType.File;
+            }
+
+            return MediaType.None;
+        }
+    }
+
+    public enum FieldType
+    {
+        Unknown,
+        ShortText,
+        LongText,
+        MultipleChoice,
+        YesNo,
+        Currency,
+        DateTime,
+        Number,
+        Classification,
+        Media,
+        Guid,
+        GuidArray,
+        Choices,
+        Address,
+        RelatedMedia,
+        RelatedData
+    }
+
+    enum MediaType
+    {
+        None,
+        Image,
+        Video,
+        File
+    }
+#>

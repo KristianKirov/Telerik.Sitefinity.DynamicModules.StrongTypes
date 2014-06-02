@@ -11,11 +11,13 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
     {
         private readonly DynamicModuleManager manager;
         private readonly Type itemType;
+        private readonly IDynamicTypeConverter converter;
 
         public DynamicTypeFactory(DynamicModuleManager manager, Type itemType)
         {
             this.manager = manager;
             this.itemType = itemType;
+            this.converter = new DynamicTypeConverter();
         }
 
         public T CreateItem()
@@ -38,10 +40,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 
         public T BuildTypedItem(DynamicContent dynamicItem)
         {
-            T newItem = new T();
-            newItem.Initialize(dynamicItem);
-
-            return newItem;
+            return converter.BuildTypedItem<T>(dynamicItem);
         }
     }
 }
