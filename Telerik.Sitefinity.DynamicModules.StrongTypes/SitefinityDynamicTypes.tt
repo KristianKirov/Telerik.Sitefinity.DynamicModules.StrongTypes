@@ -53,11 +53,20 @@ namespace <#= DefaultNamespace #>
                 get
                 {
                     <#
-            if (field.IsDynamicRelatedField)
+            if (field.SitefinityType == FieldType.RelatedData || field.SitefinityType == FieldType.RelatedMedia)
             {
+                if (field.IsDynamicRelatedField)
+                {
                 #>
                     return this.GetRelatedDynamicItem<#= field.CanSelectMultipleItems ? "s" : "" #><<#= field.SingleItemTypeShortName #>>(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
                 <#
+                }
+                else
+                {
+                #>
+                    return this.GetRelatedKnowTypeItem<#= field.CanSelectMultipleItems ? "s" : "" #><<#= field.SingleItemTypeShortName #>>(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME);
+                <#
+                }
             }
             else
             {
@@ -70,6 +79,11 @@ namespace <#= DefaultNamespace #>
                 <# if (field.CanSet) { #>
 set
                 {
+                <# if (field.FieldName == dynamicType.MainShortTextFieldName)
+                   {
+                #>
+                    this.SyncUrlNameWithMainShortTextFieldIfRequired(this.<#= field.FieldName #>, value);
+                <# } #>                 
                     this.SetDynamicFieldValue(<#= dynamicType.Name #>.<#= field.FieldName.ToUpperInvariant() #>_FIELD_NAME, <#= field.ClrTypeShortName == "Lstring" ? "value.Value" : "value" #>);
                 }
                 <# } #>
@@ -116,7 +130,6 @@ set
     }
 <#
                         break;
-                    case FieldType.RelatedMedia:
                     case FieldType.Media:
                         if (field.MediaType != MediaType.None)
                         {
@@ -159,6 +172,7 @@ set
                         }
 
                         break;
+                    case FieldType.RelatedMedia:
                     case FieldType.RelatedData:
                         if (field.CanSelectMultipleItems)
                         {
@@ -393,7 +407,7 @@ set
                 case FieldType.Classification:
                     this.ClrTypeShortName = "IEnumerable<Guid>";
                     this.CanSet = false;
-                    this.SingleItemTypeShortName = "params Guid[]";
+                    this.SingleItemTypeShortName = this.CanSelectMultipleItems ?  "params Guid[]" : "Guid";
                     this.UseCustomSetMethod = true;
                     break;
                 case FieldType.Currency:
@@ -438,7 +452,6 @@ set
                     this.SingleItemTypeShortName = "bool";
                     this.UseCustomSetMethod = false;
                     break;
-                case FieldType.RelatedMedia:
                 case FieldType.Media:
                     this.ClrTypeShortName = "ContentLink[]";
                     this.CanSet = false;
@@ -463,6 +476,7 @@ set
                     this.SingleItemTypeShortName = "Address";
                     this.UseCustomSetMethod = false;
                     break;
+                case FieldType.RelatedMedia:
                 case FieldType.RelatedData:
                     string relatedTypeName = (string)fieldRowReader["related_data_type"];
                     if (relatedTypeName.StartsWith("Telerik.Sitefinity.DynamicTypes.Model", StringComparison.InvariantCultureIgnoreCase))

@@ -1,538 +1,189 @@
 ----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:23
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'False' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Licensing.Web.UI.LicenseRegistration.SaveLicense()
-   at System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
-   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
-   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)'
+Message: Shutting down threadpool...
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:26
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'False' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Licensing.Web.UI.LicenseRegistration.SaveLicense()
-   at System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
-   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
-   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)'
+Message: Thread pool 'BackgroundTasksService': Shutdown of thread pool completed. All currently running threads will finish their work and stop.
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 7:44:24
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'False' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.InitializeModule(ModuleSettings settings, InstallContext installContext, Nullable`1 start, Boolean skipLoading)
-   at Telerik.Sitefinity.Services.SystemManager.Initialize()
-   at Telerik.Sitefinity.Web.UI.Backend.StartupWizard.wizard_FinishButtonClick(Object sender, InternalWizardNavigationEventArgs e)
-   at Telerik.Sitefinity.Web.UI.Backend.InternalWizard.OnFinishButtonClick(InternalWizardNavigationEventArgs e)
-   at Telerik.Sitefinity.Web.UI.Backend.InternalWizard.OnBubbleEvent(Object source, EventArgs e)
-   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
-   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
-   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)'
+Message: WorkerThread is shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 7:44:31
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'False' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Web.UI.Backend.StartupWizard.wizard_FinishButtonClick(Object sender, InternalWizardNavigationEventArgs e)
-   at Telerik.Sitefinity.Web.UI.Backend.InternalWizard.OnFinishButtonClick(InternalWizardNavigationEventArgs e)
-   at Telerik.Sitefinity.Web.UI.Backend.InternalWizard.OnBubbleEvent(Object source, EventArgs e)
-   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   at System.Web.UI.Page.ProcessRequest()
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
-   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
-   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
-   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)'
+Message: WorkerThread is shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:16:09
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'False' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.Install.ModuleInstaller.InstallModule(DynamicModule module, Boolean commitTransaction, Boolean restartApplication)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.ActivateContentTypeInternal(String moduleId, String providerName)
-   at SyncInvokeActivateModule(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: WorkerThread is shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:21:24
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'False' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.Install.ModuleInstaller.InstallModule(DynamicModule module, Boolean commitTransaction, Boolean restartApplication)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.ActivateContentTypeInternal(String moduleId, String providerName)
-   at SyncInvokeActivateModule(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: Background task scheduler shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:27:50
+Timestamp: 6/4/2014 8:08:07 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'True' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: WorkerThread is shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:27:50
+Timestamp: 6/4/2014 8:08:37 AM
 
-Message: Attempting application domain unload. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication()
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: Shutting down threadpool...
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:27:50
+Timestamp: 6/4/2014 8:08:37 AM
 
-Message: Application domain unload succeeded. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication()
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: Thread pool 'BackgroundTasksService': Shutdown of thread pool completed. Threads aborted.
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:28:25
+Timestamp: 6/4/2014 9:35:08 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'True' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: Shutting down threadpool...
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:28:25
+Timestamp: 6/4/2014 9:35:08 AM
 
-Message: Attempting application domain unload. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication()
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: Thread pool 'BackgroundTasksService': Shutdown of thread pool completed. All currently running threads will finish their work and stop.
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:28:25
+Timestamp: 6/4/2014 9:35:08 AM
 
-Message: Application domain unload succeeded. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication()
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: WorkerThread is shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:30:35
+Timestamp: 6/4/2014 9:35:08 AM
 
-Message: Application restart was requested. AttemptFullRestart: 'True' SendRestartApplicationSystemMessage: 'True'. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.LogApplicationRestart(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: WorkerThread is shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:30:35
+Timestamp: 6/4/2014 9:35:08 AM
 
-Message: Attempting application domain unload. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication()
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: Background task scheduler shut down
 
 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:30:35
+Timestamp: 6/4/2014 9:35:08 AM
 
-Message: Application domain unload succeeded. StackTrace: '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Telerik.Sitefinity.Services.SystemManager.TryRestartApplication()
-   at Telerik.Sitefinity.Services.SystemManager.RestartApplication(Boolean attemptFullRestart, Boolean sendRestartApplicationSystemMessage)
-   at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.SaveContentType(Guid moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at Telerik.Sitefinity.DynamicModules.Builder.Web.Services.ContentTypeService.SaveContentTypeInternal(String moduleId, ContentTypeContext context, String provider, Boolean updateWidgetTemplates, Boolean removeToolboxItem)
-   at SyncInvokeSaveContentType(Object , Object[] , Object[] )
-   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
-   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
-   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
-   at System.ServiceModel.Dispatcher.ChannelHandler.DispatchAndReleasePump(RequestContext request, Boolean cleanThread, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.HandleRequest(RequestContext request, OperationContext currentOperationContext)
-   at System.ServiceModel.Dispatcher.ChannelHandler.AsyncMessagePump(IAsyncResult result)
-   at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.AsyncResult.Complete(Boolean completedSynchronously)
-   at Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.RequestInterceptorReplyChannelBase`1.TryReceiveRequestAsyncResult.InnerTryReceiveCallback(IAsyncResult result)
-   at System.Runtime.AsyncResult.Complete(Boolean completedSynchronously)
-   at System.Runtime.InputQueue`1.AsyncQueueReader.Set(Item item)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(Item item, Boolean canDispatchOnThisThread)
-   at System.Runtime.InputQueue`1.EnqueueAndDispatch(T item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.SingletonChannelAcceptor`3.Enqueue(QueueItemType item, Action dequeuedCallback, Boolean canDispatchOnThisThread)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.CompleteParseAndEnqueue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EnqueueMessageAsyncResult.HandleParseIncomingMessage(IAsyncResult result)
-   at System.Runtime.AsyncResult.SyncContinue(IAsyncResult result)
-   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.BeginProcessInboundRequest(ReplyChannelAcceptor replyChannelAcceptor, Action dequeuedCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Channels.HttpChannelListener`1.HttpContextReceivedAsyncResult`1.ProcessHttpContextAsync()
-   at System.ServiceModel.Channels.HttpChannelListener`1.BeginHttpContextReceived(HttpRequestContext context, Action acceptorCallback, AsyncCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpTransportManager.HttpContextReceived(HostedHttpRequestAsyncResult result)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.HandleRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.BeginRequest()
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequest(Object state)
-   at System.ServiceModel.AspNetPartialTrustHelpers.PartialTrustInvoke(ContextCallback callback, Object state)
-   at System.ServiceModel.Activation.HostedHttpRequestAsyncResult.OnBeginRequestWithFlow(Object state)
-   at System.Runtime.IOThreadScheduler.ScheduledOverlapped.IOCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
-   at System.Runtime.Fx.IOCompletionThunk.UnhandledExceptionFrame(UInt32 error, UInt32 bytesRead, NativeOverlapped* nativeOverlapped)
-   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)'
+Message: WorkerThread is shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 9:35:08 AM
+
+Message: WorkerThread is shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 9:35:38 AM
+
+Message: Shutting down threadpool...
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 9:35:38 AM
+
+Message: Thread pool 'BackgroundTasksService': Shutdown of thread pool completed. Threads aborted.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: Shutting down threadpool...
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: Thread pool 'BackgroundTasksService': Shutdown of thread pool completed. All currently running threads will finish their work and stop.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: Background task scheduler shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: WorkerThread is shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: WorkerThread is shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: WorkerThread is shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:10 AM
+
+Message: WorkerThread is shut down
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:40 AM
+
+Message: Shutting down threadpool...
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:47:40 AM
+
+Message: Thread pool 'BackgroundTasksService': Shutdown of thread pool completed. Threads aborted.
 
 
 ----------------------------------------

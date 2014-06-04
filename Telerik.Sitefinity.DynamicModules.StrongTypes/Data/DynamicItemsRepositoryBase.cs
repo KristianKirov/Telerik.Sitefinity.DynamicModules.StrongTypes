@@ -133,12 +133,15 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 
         public void Commit()
         {
-            this.Manager.SaveChanges();
+            using (new ElevatedModeRegion(this.Manager))
+            {
+                this.Manager.SaveChanges();
+            }
         }
 
         protected IList<T> Typify(IQueryable<DynamicContent> dynamicItems)
         {
-            return dynamicItems.Select(dc => this.Typify(dc)).ToList();
+            return dynamicItems.ToList().Select(dc => this.Typify(dc)).ToList();
         }
 
         protected T Typify(DynamicContent dynamicContent)
@@ -208,6 +211,18 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
             }
 
             return this.Typify(dynamicItem);
+        }
+
+        public T GetEditableItem(T originalItem)
+        {
+            if (originalItem.DynamicContent.Status == ContentLifecycleStatus.Master)
+            {
+                return originalItem;
+            }
+
+            DynamicContent masterItem = (DynamicContent)this.Manager.Lifecycle.GetMaster(originalItem.DynamicContent);
+
+            return this.Typify(masterItem);
         }
     }
 }

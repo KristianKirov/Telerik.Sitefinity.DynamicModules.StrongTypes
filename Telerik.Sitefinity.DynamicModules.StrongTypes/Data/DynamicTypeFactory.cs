@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.DynamicModules.Model;
+using Telerik.Sitefinity.Security;
 
 namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 {
@@ -22,7 +23,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 
         public T CreateItem()
         {
-            DynamicContent dynamicItem = this.manager.CreateDataItem(this.itemType);
+            DynamicContent dynamicItem = this.CreateItemInternal(null);
 
             T newItem = this.BuildTypedItem(dynamicItem);
 
@@ -31,9 +32,28 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 
         public T CreateItem(Guid id)
         {
-            DynamicContent dynamicItem = this.manager.CreateDataItem(this.itemType);
-
+            DynamicContent dynamicItem = this.CreateItemInternal(id);
+            
             T newItem = this.BuildTypedItem(dynamicItem);
+
+            return newItem;
+        }
+
+        private DynamicContent CreateItemInternal(Guid? id)
+        {
+            DynamicContent newItem = null;
+            if (id != null)
+            {
+                newItem = this.manager.CreateDataItem(this.itemType, id.Value, this.manager.Provider.ApplicationName);
+            }
+            else
+            {
+                newItem = this.manager.CreateDataItem(this.itemType);
+            }
+            
+            newItem.Owner = SecurityManager.GetCurrentUserId();
+            newItem.PublicationDate = DateTime.UtcNow;
+            newItem.SetWorkflowStatus(this.manager.Provider.ApplicationName, "Draft");
 
             return newItem;
         }

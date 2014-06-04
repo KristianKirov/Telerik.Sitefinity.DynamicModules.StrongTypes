@@ -30,6 +30,8 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                    this.SyncUrlNameWithMainShortTextFieldIfRequired(this.ShortText, value);
+                                 
                     this.SetDynamicFieldValue(FullItem.SHORTTEXT_FIELD_NAME, value.Value);
                 }
                 }
@@ -43,6 +45,7 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.LONGTEXT_FIELD_NAME, value.Value);
                 }
                 }
@@ -82,6 +85,7 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.YESNO_FIELD_NAME, value);
                 }
                 }
@@ -95,6 +99,7 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.DATETIME_FIELD_NAME, value);
                 }
                 }
@@ -108,6 +113,7 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.NUMBER_FIELD_NAME, value);
                 }
                 }
@@ -121,153 +127,112 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.ADDRESS_FIELD_NAME, value);
                 }
                 }
 
             private const string SINGLEIMAGEFIELD_FIELD_NAME = "SingleImageField";
-            public ContentLink[] SingleImageField
+            public Telerik.Sitefinity.Libraries.Model.Image SingleImageField
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(FullItem.SINGLEIMAGEFIELD_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItem<Telerik.Sitefinity.Libraries.Model.Image>(FullItem.SINGLEIMAGEFIELD_FIELD_NAME);
                                 }
                 }
 
-    public void SetSingleImageField(Guid imageId, string librariesProviderName = "")
+    public void SetSingleImageField(Telerik.Sitefinity.Libraries.Model.Image relatedItem)
     {
-    this.ClearSingleImageField();
-    this.AddImageValue(FullItem.SINGLEIMAGEFIELD_FIELD_NAME, imageId, librariesProviderName);
+        this.SetRelatedItem(FullItem.SINGLEIMAGEFIELD_FIELD_NAME, relatedItem);
     }
-
-    public void SetSingleImageField(Image image)
-    {
-    this.ClearSingleImageField();
-    this.AddImageValue(FullItem.SINGLEIMAGEFIELD_FIELD_NAME, image);
-    }
-
     public void ClearSingleImageField()
     {
-        this.ClearImages(FullItem.SINGLEIMAGEFIELD_FIELD_NAME);
+        this.ClearRelatedItems(FullItem.SINGLEIMAGEFIELD_FIELD_NAME);
     }
             private const string MULTIPLEIMAGEFIELD_FIELD_NAME = "MultipleImageField";
-            public ContentLink[] MultipleImageField
+            public IList<Telerik.Sitefinity.Libraries.Model.Image> MultipleImageField
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItems<Telerik.Sitefinity.Libraries.Model.Image>(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME);
                                 }
                 }
 
-    public void AddMultipleImageField(Guid imageId, string librariesProviderName = "")
+    public void AddMultipleImageField(Telerik.Sitefinity.Libraries.Model.Image relatedItem)
     {
-    this.AddImageValue(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME, imageId, librariesProviderName);
+        this.AddRelatedItem(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME, relatedItem);
     }
-
-    public void AddMultipleImageField(Image image)
-    {
-    this.AddImageValue(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME, image);
-    }
-
     public void ClearMultipleImageField()
     {
-        this.ClearImages(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME);
+        this.ClearRelatedItems(FullItem.MULTIPLEIMAGEFIELD_FIELD_NAME);
     }
             private const string SINGLEVIDEOFIELD_FIELD_NAME = "SingleVideoField";
-            public ContentLink[] SingleVideoField
+            public Telerik.Sitefinity.Libraries.Model.Video SingleVideoField
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(FullItem.SINGLEVIDEOFIELD_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItem<Telerik.Sitefinity.Libraries.Model.Video>(FullItem.SINGLEVIDEOFIELD_FIELD_NAME);
                                 }
                 }
 
-    public void SetSingleVideoField(Guid videoId, string librariesProviderName = "")
+    public void SetSingleVideoField(Telerik.Sitefinity.Libraries.Model.Video relatedItem)
     {
-    this.ClearSingleVideoField();
-    this.AddVideoValue(FullItem.SINGLEVIDEOFIELD_FIELD_NAME, videoId, librariesProviderName);
+        this.SetRelatedItem(FullItem.SINGLEVIDEOFIELD_FIELD_NAME, relatedItem);
     }
-
-    public void SetSingleVideoField(Video video)
-    {
-    this.ClearSingleVideoField();
-    this.AddVideoValue(FullItem.SINGLEVIDEOFIELD_FIELD_NAME, video);
-    }
-
     public void ClearSingleVideoField()
     {
-        this.ClearVideos(FullItem.SINGLEVIDEOFIELD_FIELD_NAME);
+        this.ClearRelatedItems(FullItem.SINGLEVIDEOFIELD_FIELD_NAME);
     }
             private const string MULTIPLEVIDEOFIELD_FIELD_NAME = "MultipleVideoField";
-            public ContentLink[] MultipleVideoField
+            public IList<Telerik.Sitefinity.Libraries.Model.Video> MultipleVideoField
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItems<Telerik.Sitefinity.Libraries.Model.Video>(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME);
                                 }
                 }
 
-    public void AddMultipleVideoField(Guid videoId, string librariesProviderName = "")
+    public void AddMultipleVideoField(Telerik.Sitefinity.Libraries.Model.Video relatedItem)
     {
-    this.AddVideoValue(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME, videoId, librariesProviderName);
+        this.AddRelatedItem(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME, relatedItem);
     }
-
-    public void AddMultipleVideoField(Video video)
-    {
-    this.AddVideoValue(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME, video);
-    }
-
     public void ClearMultipleVideoField()
     {
-        this.ClearVideos(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME);
+        this.ClearRelatedItems(FullItem.MULTIPLEVIDEOFIELD_FIELD_NAME);
     }
             private const string SINGLEFILEFIELD_FIELD_NAME = "SingleFileField";
-            public ContentLink[] SingleFileField
+            public Telerik.Sitefinity.Libraries.Model.Document SingleFileField
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(FullItem.SINGLEFILEFIELD_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItem<Telerik.Sitefinity.Libraries.Model.Document>(FullItem.SINGLEFILEFIELD_FIELD_NAME);
                                 }
                 }
 
-    public void SetSingleFileField(Guid fileId, string librariesProviderName = "")
+    public void SetSingleFileField(Telerik.Sitefinity.Libraries.Model.Document relatedItem)
     {
-    this.ClearSingleFileField();
-    this.AddFileValue(FullItem.SINGLEFILEFIELD_FIELD_NAME, fileId, librariesProviderName);
+        this.SetRelatedItem(FullItem.SINGLEFILEFIELD_FIELD_NAME, relatedItem);
     }
-
-    public void SetSingleFileField(Document file)
-    {
-    this.ClearSingleFileField();
-    this.AddFileValue(FullItem.SINGLEFILEFIELD_FIELD_NAME, file);
-    }
-
     public void ClearSingleFileField()
     {
-        this.ClearFiles(FullItem.SINGLEFILEFIELD_FIELD_NAME);
+        this.ClearRelatedItems(FullItem.SINGLEFILEFIELD_FIELD_NAME);
     }
             private const string MULTIPLEFILEFIELD_FIELD_NAME = "MultipleFileField";
-            public ContentLink[] MultipleFileField
+            public IList<Telerik.Sitefinity.Libraries.Model.Document> MultipleFileField
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(FullItem.MULTIPLEFILEFIELD_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItems<Telerik.Sitefinity.Libraries.Model.Document>(FullItem.MULTIPLEFILEFIELD_FIELD_NAME);
                                 }
                 }
 
-    public void AddMultipleFileField(Guid fileId, string librariesProviderName = "")
+    public void AddMultipleFileField(Telerik.Sitefinity.Libraries.Model.Document relatedItem)
     {
-    this.AddFileValue(FullItem.MULTIPLEFILEFIELD_FIELD_NAME, fileId, librariesProviderName);
+        this.AddRelatedItem(FullItem.MULTIPLEFILEFIELD_FIELD_NAME, relatedItem);
     }
-
-    public void AddMultipleFileField(Document file)
-    {
-    this.AddFileValue(FullItem.MULTIPLEFILEFIELD_FIELD_NAME, file);
-    }
-
     public void ClearMultipleFileField()
     {
-        this.ClearFiles(FullItem.MULTIPLEFILEFIELD_FIELD_NAME);
+        this.ClearRelatedItems(FullItem.MULTIPLEFILEFIELD_FIELD_NAME);
     }
             private const string GUIDFIELD_FIELD_NAME = "GuidField";
             public Guid GuidField
@@ -278,6 +243,7 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.GUIDFIELD_FIELD_NAME, value);
                 }
                 }
@@ -291,6 +257,7 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(FullItem.ARRAYOFGUIDS_FIELD_NAME, value);
                 }
                 }
@@ -334,7 +301,7 @@ namespace SitefinityWebApp
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<Telerik.Sitefinity.News.Model.NewsItem>(FullItem.NEWSRELATEDDATASINGLE_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItem<Telerik.Sitefinity.News.Model.NewsItem>(FullItem.NEWSRELATEDDATASINGLE_FIELD_NAME);
                                 }
                 }
 
@@ -351,7 +318,7 @@ namespace SitefinityWebApp
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<IList<Telerik.Sitefinity.News.Model.NewsItem>>(FullItem.NEWSRELATEDDATAMULTIPLE_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItems<Telerik.Sitefinity.News.Model.NewsItem>(FullItem.NEWSRELATEDDATAMULTIPLE_FIELD_NAME);
                                 }
                 }
 
@@ -372,7 +339,7 @@ namespace SitefinityWebApp
                                 }
                 }
 
-    public void SetFirstClassification(params Guid[] taxonId)
+    public void SetFirstClassification(Guid taxonId)
     {
         //Do we need it?
         this.ClearClassificationField(FullItem.FIRSTCLASSIFICATION_FIELD_NAME);
@@ -437,6 +404,8 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                    this.SyncUrlNameWithMainShortTextFieldIfRequired(this.Title, value);
+                                 
                     this.SetDynamicFieldValue(RelatedItem.TITLE_FIELD_NAME, value.Value);
                 }
                 }
@@ -450,34 +419,27 @@ namespace SitefinityWebApp
                                 }
                 set
                 {
+                                 
                     this.SetDynamicFieldValue(RelatedItem.DATETIME_FIELD_NAME, value);
                 }
                 }
 
             private const string ICON_FIELD_NAME = "Icon";
-            public ContentLink[] Icon
+            public Telerik.Sitefinity.Libraries.Model.Image Icon
             {
                 get
                 {
-                                        return this.GetDynamicFieldValue<ContentLink[]>(RelatedItem.ICON_FIELD_NAME);
+                                        return this.GetRelatedKnowTypeItem<Telerik.Sitefinity.Libraries.Model.Image>(RelatedItem.ICON_FIELD_NAME);
                                 }
                 }
 
-    public void SetIcon(Guid imageId, string librariesProviderName = "")
+    public void SetIcon(Telerik.Sitefinity.Libraries.Model.Image relatedItem)
     {
-    this.ClearIcon();
-    this.AddImageValue(RelatedItem.ICON_FIELD_NAME, imageId, librariesProviderName);
+        this.SetRelatedItem(RelatedItem.ICON_FIELD_NAME, relatedItem);
     }
-
-    public void SetIcon(Image image)
-    {
-    this.ClearIcon();
-    this.AddImageValue(RelatedItem.ICON_FIELD_NAME, image);
-    }
-
     public void ClearIcon()
     {
-        this.ClearImages(RelatedItem.ICON_FIELD_NAME);
+        this.ClearRelatedItems(RelatedItem.ICON_FIELD_NAME);
     }
         }
 

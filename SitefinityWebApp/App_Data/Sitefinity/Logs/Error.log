@@ -1,5 +1,5 @@
 ----------------------------------------
-Timestamp: 6/2/2014 7:39:41 AM
+Timestamp: 6/4/2014 9:14:37 AM
 
 Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
    at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
@@ -20,20 +20,20 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
+App Domain: /LM/W3SVC/9/ROOT-1-130463468475312736
 
-ProcessId: 792
+ProcessId: 3092
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:5324
+Win32 ThreadId:11912
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 7:39:41 AM
+Timestamp: 6/4/2014 9:14:37 AM
 
 Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
 
@@ -49,25 +49,25 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
+App Domain: /LM/W3SVC/9/ROOT-1-130463468475312736
 
-ProcessId: 792
+ProcessId: 3092
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:5324
+Win32 ThreadId:11912
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:43
+Timestamp: 4.6.2014 г. 9:14:39
 
-Message: HandlingInstanceID: 200868e3-f00f-401b-a964-034717185d62
+Message: HandlingInstanceID: f0c208f6-4b82-46f0-a846-797f898fd6b5
 An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
 ---------------------------------------------------------------------------------------------------
-06/02/2014 10:39:43
+06/04/2014 12:14:39
 Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 Message : Bad Data.
 
@@ -91,12 +91,12 @@ Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCry
 Additional Info:
 
 MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:43
+TimeStamp : 4.6.2014 г. 9:14:39
 FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
+AppDomainName : /LM/W3SVC/9/ROOT-1-130463468475312736
 ThreadIdentity : 
 WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/
+Requested URL : http://localhost:8093/Sitefinity/Administration/Module-builder/module/type/d7d3c287-ae97-616c-accb-ff00009b0b8b
 
 
 Category: ErrorLog
@@ -111,1230 +111,265 @@ Title:Enterprise Library Exception Handling
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
+App Domain: /LM/W3SVC/9/ROOT-1-130463468475312736
 
-ProcessId: 792
+ProcessId: 3092
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:10040
+Win32 ThreadId:14368
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:43
+Timestamp: 6/4/2014 9:41:59 AM
 
-Message: HandlingInstanceID: d23f4681-6357-471b-a447-05bf024c86e3
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-1-130463484928353380
+
+ProcessId: 13196
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:12708
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 9:41:59 AM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-1-130463484928353380
+
+ProcessId: 13196
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:12708
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 10:24:05 AM
+
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-1-130463510186758573
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:12344
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 10:24:05 AM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-1-130463510186758573
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:12344
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 10:27:16 AM
+
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-2-130463511925871756
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:12344
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 10:27:16 AM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-2-130463511925871756
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:12344
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 4.6.2014 г. 10:36:14
+
+Message: HandlingInstanceID: 27911b89-03bc-45e1-89d9-beda04c7053d
+An exception of type 'System.Runtime.Serialization.SerializationException' occurred and was caught.
 ---------------------------------------------------------------------------------------------------
-06/02/2014 10:39:43
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
+06/04/2014 13:36:14
+Type : System.Runtime.Serialization.SerializationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Expecting state 'Element'.. Encountered 'Text'  with name '', namespace ''. 
+Source : System.Runtime.Serialization
 Help link : 
 Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+TargetSite : System.Object ReadArrayOfguidFromJson(System.Runtime.Serialization.XmlReaderDelegator, System.Runtime.Serialization.Json.XmlObjectSerializerReadContextComplexJson, System.Xml.XmlDictionaryString, System.Xml.XmlDictionaryString, System.Runtime.Serialization.CollectionDataContract)
+HResult : -2146233076
+Stack Trace :    at ReadArrayOfguidFromJson(XmlReaderDelegator , XmlObjectSerializerReadContextComplexJson , XmlDictionaryString , XmlDictionaryString , CollectionDataContract )
+   at System.Runtime.Serialization.Json.JsonCollectionDataContract.ReadJsonValueCore(XmlReaderDelegator jsonReader, XmlObjectSerializerReadContextComplexJson context)
+   at System.Runtime.Serialization.Json.JsonDataContract.ReadJsonValue(XmlReaderDelegator jsonReader, XmlObjectSerializerReadContextComplexJson context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContextComplex.InternalDeserializeWithSurrogate(XmlReaderDelegator xmlReader, Type declaredType, DataContract surrogateDataContract, String name, String ns)
+   at ReadFullItemFromJson(XmlReaderDelegator , XmlObjectSerializerReadContextComplexJson , XmlDictionaryString , XmlDictionaryString[] )
+   at System.Runtime.Serialization.Json.JsonClassDataContract.ReadJsonValueCore(XmlReaderDelegator jsonReader, XmlObjectSerializerReadContextComplexJson context)
+   at System.Runtime.Serialization.Json.JsonDataContract.ReadJsonValue(XmlReaderDelegator jsonReader, XmlObjectSerializerReadContextComplexJson context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContextComplex.InternalDeserializeWithSurrogate(XmlReaderDelegator xmlReader, Type declaredType, DataContract surrogateDataContract, String name, String ns)
+   at ReadDynamicItemContextFromJson(XmlReaderDelegator , XmlObjectSerializerReadContextComplexJson , XmlDictionaryString , XmlDictionaryString[] )
+   at System.Runtime.Serialization.Json.JsonClassDataContract.ReadJsonValueCore(XmlReaderDelegator jsonReader, XmlObjectSerializerReadContextComplexJson context)
+   at System.Runtime.Serialization.Json.JsonDataContract.ReadJsonValue(XmlReaderDelegator jsonReader, XmlObjectSerializerReadContextComplexJson context)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContext.InternalDeserialize(XmlReaderDelegator reader, String name, String ns, Type declaredType, DataContract& dataContract)
+   at System.Runtime.Serialization.XmlObjectSerializerReadContextComplex.InternalDeserializeWithSurrogate(XmlReaderDelegator xmlReader, Type declaredType, DataContract surrogateDataContract, String name, String ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader, Boolean verifyObjectName)
+   at System.ServiceModel.Dispatcher.SingleBodyParameterDataContractMessageFormatter.ReadObject(Message message)
+   at System.ServiceModel.Dispatcher.SingleBodyParameterMessageFormatter.DeserializeRequest(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.DemultiplexingDispatchMessageFormatter.DeserializeRequest(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.UriTemplateDispatchFormatter.DeserializeRequest(Message message, Object[] parameters)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.DeserializeInputs(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
 
 Additional Info:
 
 MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:43
+TimeStamp : 4.6.2014 г. 10:36:14
 FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
+AppDomainName : /LM/W3SVC/9/ROOT-2-130463511925871756
 ThreadIdentity : 
 WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Licensing?ReturnUrl=/
+Requested URL : http://localhost:8093/Sitefinity/Services/DynamicModules/Data.svc/00000000-0000-0000-0000-000000000000/?itemType=Telerik.Sitefinity.DynamicTypes.Model.FullModule.FullItem&providerName=OpenAccessProvider&managerType=Telerik.Sitefinity.DynamicModules.DynamicModuleManager&provider=OpenAccessProvider&workflowOperation=Publish
 
 
 Category: ErrorLog
 
 Priority: 0
 
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:4908
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:45
-
-Message: HandlingInstanceID: a8efef92-43cb-49d1-8790-5d5584df139c
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:39:45
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:45
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Telerik.Web.UI.WebResource.axd?compress=0&_TSM_CombinedScripts_=;;Telerik.Sitefinity.Resources,+Version=7.0.5100.0,+Culture=neutral,+PublicKeyToken=null:bg-BG:a6635f48-e22f-44c2-8ae2-67269b80c83c:5aa8d08c:62c62c5e:c0717fa6:e5e8fcea
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:10040
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:45
-
-Message: HandlingInstanceID: e0bc4082-677e-4e18-9e7d-d5d9c457fe2c
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:39:45
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:45
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl01_TSM&compress=0&_TSM_CombinedScripts_=;;System.Web.Extensions,+Version=4.0.0.0,+Culture=neutral,+PublicKeyToken=31bf3856ad364e35:bg-BG:5924cf72-83cf-477d-98eb-a608a92942c5:ea597d4b:b25378d2
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:1932
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:45
-
-Message: HandlingInstanceID: 418d2a37-d8b5-4ba3-aa9e-7e3a63abd294
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:39:45
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:45
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/ScriptResource.axd?d=KBf8Q4os7mbYNBx5mxLTSGiVLcxfG4tX3u5UQN5GAg4PKh9bjYwNB3et3lCKMiCys6PIDE22Yllm8JnZbOkOQMZUb0ubwOsEUw2o5O3hKLKGRIG3KtJdaP1ShP-q_shooTQH4O3vLrELuLBLjejzJ51xMbSdfTBHFJ5jewZmVMQ1&t=fffffffff284add6
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:7308
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:45
-
-Message: HandlingInstanceID: 07f154c1-d22f-4685-a030-7f5e7ddb453c
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:39:45
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:45
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/WebResource.axd?d=PmXGkIqJE2BAjLuq4Fi_M1ykLvht9e8dvQzYqfoT5aw7a7J2BMJhZ6GLY2d5SM-r0Yo5LlA9HWOddBYFEskFKbFPUCFrFsZCAwqvEKsoq2gjOXRt8fSD2Pv-pzrwXyq-8UsaHmKoJD6XlVr1YT4rXPAHyQIAJe3j0NWW3eqv7UzLayXXCU4z7yjdYxJNZBc_0lqfk9n78wReSngdsrGRIg2&t=635371478578334012
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:7308
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:39:52
-
-Message: HandlingInstanceID: 0548d32b-80b7-4f2e-900c-b8572c961092
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:39:52
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:39:52
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Licensing?ReturnUrl=/
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:4908
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:19
-
-Message: HandlingInstanceID: 5d12a61d-ff04-4cb7-9b57-0944a0873a0c
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:19
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:19
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Licensing?ReturnUrl=/
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:4908
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:19
-
-Message: HandlingInstanceID: 4105a112-9ceb-49d9-b98c-3045b40bb6c4
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:19
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:19
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Telerik.Web.UI.WebResource.axd?compress=0&_TSM_CombinedScripts_=;;Telerik.Sitefinity.Resources,+Version=7.0.5100.0,+Culture=neutral,+PublicKeyToken=null:bg-BG:a6635f48-e22f-44c2-8ae2-67269b80c83c:5aa8d08c:62c62c5e:c0717fa6:e5e8fcea:d1d3c557;Telerik.Web.UI,+Version=2014.1.403.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:bg-BG:fe717150-da5c-4560-8705-07b356b5226f:92753c09:9ad5c0b:bf649b0;Telerik.Web.UI.Skins,+Version=2014.1.403.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:bg-BG:46433934-f487-4d61-9bb5-4b7ec3460d8a:7d245c43
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:1932
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:19
-
-Message: HandlingInstanceID: 456dc66e-fb18-4c96-ad77-76981e2624b6
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:19
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:19
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl01_TSM&compress=0&_TSM_CombinedScripts_=;;System.Web.Extensions,+Version=4.0.0.0,+Culture=neutral,+PublicKeyToken=31bf3856ad364e35:bg-BG:5924cf72-83cf-477d-98eb-a608a92942c5:ea597d4b:b25378d2;Telerik.Web.UI,+Version=2014.1.403.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:bg-BG:fe717150-da5c-4560-8705-07b356b5226f:16e4e7cd:874f8ea2:f7645509:24ee1bba:92fe8ea0:19620875:f46195d3:fa31b949:490a9d4e
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:10040
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:20
-
-Message: HandlingInstanceID: 4ce1a1dc-42dc-481f-9d82-2a91cedceac7
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:20
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:20
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/WebResource.axd?d=_Th_iU9R_CPtoxYquVd9d4WpQl-7kAJlOADRwRTLpvR4NoHY5D7kgKgf42xEl5qyB2rgJqE853QKy5VvyIFmm2vgaW_MWhfNxdXdwDr-8X8PNYAEnN4oamXtcQ2IZF1Rai27qUaM6fxcV61ssdezNSxqJHD9wvQRx5i6gje8jAUidV4Z-_sPDiD-yJNL1fdV0&t=635373006907397537
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:7308
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:20
-
-Message: HandlingInstanceID: facafad5-b80b-45ce-bdad-d00232631fae
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:20
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:20
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/WebResource.axd?d=By4glSBwKYL-2C_RDTCJI-mZ_WaQYy07LX-DPxpPInkFEAxUG3TyrDuY_GLi37VKVnkiMClcyxA5AZNFSGOBZ3ktWn_g2SGYWcVSlz1oruRue6kJrcyNmpuIOpc628mKOQUpTKulDdshdPrlpqWTIHQ1bZiKnQWJJ8h9GIUpdDup_Y6I5vykboGz9GvNaEQEzNdNlLjNGhTsI4LKva0rYw2&t=635373006907397537
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:1932
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:20
-
-Message: HandlingInstanceID: 4cd95521-1bb1-4a03-8900-94118553271e
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:20
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:20
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/WebResource.axd?d=HMbd2rj3LSb2LyP2dJlSGyKSOIloOpR2zhMaNsZCuEGVBFIMLDkUOickKSEdIBEhjaeA1xT6KYkw7l0pBWQpTJwKjh_I7tQHrJ4BIG1YfsBC99s-B1A8TxxKmiUamYOeY8KVQ9IgfJqr16KQfGMCwTHU5QwCXzZITUqEzaA0PWGP0OaChJMhUrLiBN5B04440&t=635373006907397537
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:3592
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:20
-
-Message: HandlingInstanceID: af6e80f1-cc55-4031-a611-890365e8e348
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:20
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:20
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/WebResource.axd?d=k2kfKBhEfe3HCFLZne_h1RN5d0r4eLrxr0zuoY5tZVtMy93PCF04Dms1bV6lXCu1HF9twujui7txlRuLkj6aYt2pu4ri-aUwFCP2Eu6EHG4ho6tC_phNUnsEcbHfIoIBZdBc89nkOr31FWBMod0SgOkIqoF-WJQVVwADejUvgQR5V7t18tZD0ZJy61OVszt7f6sV0Lo2dVcUDB6RN3fP8g2&t=635371478578334012
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:7308
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:23
-
-Message: HandlingInstanceID: 45339964-9e2b-45a8-a212-9b83dd30eb6b
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:23
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:23
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Licensing?ReturnUrl=/
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:10040
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:28
-
-Message: HandlingInstanceID: 47b7c8bb-2d40-4d5a-ac06-149b2f975d18
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:28
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:28
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:1932
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:40:28
-
-Message: HandlingInstanceID: e26ff9f5-dd91-4bd3-8ad3-14d499a9a040
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:40:28
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:40:28
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Startup
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:7308
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:42:08
-
-Message: HandlingInstanceID: 55ad26e6-c398-4eec-959a-198386eb1f44
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:42:08
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:42:08
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Startup
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:11048
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:42:08
-
-Message: HandlingInstanceID: 6f06861d-2157-4ac4-a0eb-a8906c9f9077
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:42:08
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:42:08
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Startup
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:3592
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 7:43:42
-
-Message: HandlingInstanceID: 8c0bde2e-f540-4335-96dc-ded546768ba6
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 10:43:42
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Bad Data.
-
-Source : mscorlib
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ThrowCryptographicException(Int32)
-HResult : -2146893819
-Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
-   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
-   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
-   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
-   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
-   at System.IO.Stream.Close()
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 7:43:42
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : 
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Startup
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 9010
-
-Severity: Warning
-
-Title:Enterprise Library Exception Handling
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:11048
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 8:05:11
-
-Message: HandlingInstanceID: f610de18-c3f7-40ab-a776-d1befbbbc178
-An exception of type 'System.Exception' occurred and was caught.
-----------------------------------------------------------------
-06/02/2014 11:05:11
-Type : System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Taxonomy with Id "00da8033-9c54-6c08-87a6-ff0000ec35e7" doesn't exists!
-Source : Telerik.Sitefinity
-Help link : 
-Data : System.Collections.ListDictionaryInternal
-TargetSite : Void ValidateDynamicModuleTaxonomyFields(Telerik.Sitefinity.DynamicModules.Builder.Model.DynamicModule)
-HResult : -2146233088
-Stack Trace :    at Telerik.Sitefinity.DynamicModules.Builder.ModuleBuilderHelper.ValidateDynamicModuleTaxonomyFields(DynamicModule module)
-   at Telerik.Sitefinity.DynamicModules.Builder.ExportImport.ModuleImporter.CreateModule(ModuleBuilderManager moduleBuilderManager, DynamicModule deserializedModule)
-   at Telerik.Sitefinity.DynamicModules.Builder.ExportImport.ModuleImporter.ImportModule(Stream deserializedModuleMemoryStream, Guid updateModuleId, Boolean activateModule)
-
-Additional Info:
-
-MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 8:05:11
-FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-1-130461683597766208
-ThreadIdentity : admin
-WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/import-export-module/import/00000000-0000-0000-0000-000000000000
-
-
-Category: ErrorLog
-
-Priority: 0
-
-EventId: 90060
+EventId: 90000
 
 Severity: Error
 
@@ -1342,139 +377,72 @@ Title:Enterprise Library Exception Handling
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-1-130461683597766208
+App Domain: /LM/W3SVC/9/ROOT-2-130463511925871756
 
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:10008
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 6/2/2014 8:28:19 AM
-
-Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.WebClient.OpenRead(Uri address)
-   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
-
-Category: ErrorLog
-
-Priority: -1
-
-EventId: 1
-
-Severity: Information
-
-Title:
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-2-130461712705121843
-
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:8660
+Win32 ThreadId:10048
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 8:28:19 AM
+Timestamp: 6/4/2014 10:56:57 AM
 
-Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
-
-Category: ErrorLog
-
-Priority: -1
-
-EventId: 1
-
-Severity: Information
-
-Title:
-
-Machine: KKIROV
-
-App Domain: /LM/W3SVC/9/ROOT-2-130461712705121843
-
-ProcessId: 792
-
-Process Name: c:\windows\system32\inetsrv\w3wp.exe
-
-Thread Name: 
-
-Win32 ThreadId:8660
-
-Extended Properties: 
-----------------------------------------
-----------------------------------------
-Timestamp: 2.6.2014 г. 8:28:21
-
-Message: HandlingInstanceID: 25d80186-237f-4484-957e-844f356fe035
-An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
----------------------------------------------------------------------------------------------------
-06/02/2014 11:28:21
-Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-Message : Specified key is a known weak key for 'TripleDES' and cannot be used.
-Source : mscorlib
+Message: HandlingInstanceID: 98c45b98-5e8e-49be-b8d8-32a837d6e75e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/04/2014 13:56:57
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Request timed out.
+Source : 
 Help link : 
+WebEventCode : 3001
+ErrorCode : -2147467259
 Data : System.Collections.ListDictionaryInternal
-TargetSite : System.Security.Cryptography.ICryptoTransform CreateDecryptor(Byte[], Byte[])
-HResult : -2146233296
-Stack Trace :    at System.Security.Cryptography.TripleDESCryptoServiceProvider.CreateDecryptor(Byte[] rgbKey, Byte[] rgbIV)
-   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
-   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
-   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
-
+TargetSite : 
+HResult : -2147467259
+Stack Trace : The stack trace is unavailable.
 Additional Info:
 
 MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 8:28:21
+TimeStamp : 6/4/2014 10:56:57 AM
 FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-2-130461712705121843
-ThreadIdentity : 
+AppDomainName : /LM/W3SVC/9/ROOT-2-130463511925871756
+ThreadIdentity : admin
 WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Administration/Module-builder/module/type/d7d3c287-ae97-616c-accb-ff00009b0b8b
+Requested URL : http://localhost:8093/videos/default-source/default-video-library/3.mp4?sfvrsn=2
 
 
 Category: ErrorLog
 
 Priority: 0
 
-EventId: 9010
+EventId: 90000
 
-Severity: Warning
+Severity: Error
 
 Title:Enterprise Library Exception Handling
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-2-130461712705121843
+App Domain: /LM/W3SVC/9/ROOT-2-130463511925871756
 
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:11916
+Win32 ThreadId:14476
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 8:28:54 AM
+Timestamp: 6/4/2014 11:15:36 AM
 
 Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
    at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
@@ -1495,20 +463,20 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-3-130461713063430408
+App Domain: /LM/W3SVC/9/ROOT-4-130463541067742327
 
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:5324
+Win32 ThreadId:13188
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 8:28:54 AM
+Timestamp: 6/4/2014 11:15:36 AM
 
 Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
 
@@ -1524,25 +492,88 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-3-130461713063430408
+App Domain: /LM/W3SVC/9/ROOT-4-130463541067742327
 
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:5324
+Win32 ThreadId:13188
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 2.6.2014 г. 8:28:57
+Timestamp: 6/4/2014 11:40:12 AM
 
-Message: HandlingInstanceID: 5e2a35d9-98d3-4037-8e73-1bba17f1e69d
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-5-130463555674560585
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:40:12 AM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-5-130463555674560585
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 4.6.2014 г. 11:40:14
+
+Message: HandlingInstanceID: ef2cba29-88f7-46cb-b2b4-acdf788404c9
 An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
 ---------------------------------------------------------------------------------------------------
-06/02/2014 11:28:57
+06/04/2014 14:40:14
 Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 Message : Bad Data.
 
@@ -1566,12 +597,12 @@ Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCry
 Additional Info:
 
 MachineName : KKIROV
-TimeStamp : 2.6.2014 г. 8:28:57
+TimeStamp : 4.6.2014 г. 11:40:14
 FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
-AppDomainName : /LM/W3SVC/9/ROOT-3-130461713063430408
+AppDomainName : /LM/W3SVC/9/ROOT-5-130463555674560585
 ThreadIdentity : 
 WindowsIdentity : NT AUTHORITY\SYSTEM
-Requested URL : http://localhost:8093/Sitefinity/Administration/Module-builder/module/type/d7d3c287-ae97-616c-accb-ff00009b0b8b
+Requested URL : http://localhost:8093/Tests.aspx
 
 
 Category: ErrorLog
@@ -1586,20 +617,20 @@ Title:Enterprise Library Exception Handling
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-3-130461713063430408
+App Domain: /LM/W3SVC/9/ROOT-5-130463555674560585
 
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:9064
+Win32 ThreadId:4568
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 8:31:02 AM
+Timestamp: 6/4/2014 11:43:11 AM
 
 Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
    at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
@@ -1620,20 +651,20 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-4-130461714359582311
+App Domain: /LM/W3SVC/9/ROOT-6-130463557474872357
 
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:8024
+Win32 ThreadId:13188
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 8:31:02 AM
+Timestamp: 6/4/2014 11:43:11 AM
 
 Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
 
@@ -1649,20 +680,144 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-4-130461714359582311
+App Domain: /LM/W3SVC/9/ROOT-6-130463557474872357
 
-ProcessId: 792
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:8024
+Win32 ThreadId:13188
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 9:04:14 AM
+Timestamp: 4.6.2014 г. 11:43:12
+
+Message: HandlingInstanceID: 500d97e1-b1bf-494d-a016-8252dfdaadc8
+An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+06/04/2014 14:43:12
+Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Bad Data.
+
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowCryptographicException(Int32)
+HResult : -2146893819
+Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
+   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+
+Additional Info:
+
+MachineName : KKIROV
+TimeStamp : 4.6.2014 г. 11:43:12
+FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/9/ROOT-6-130463557474872357
+ThreadIdentity : 
+WindowsIdentity : NT AUTHORITY\SYSTEM
+Requested URL : http://localhost:8093/home
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-6-130463557474872357
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:15148
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 4.6.2014 г. 11:43:12
+
+Message: HandlingInstanceID: 74359ddc-1010-4d67-9875-b6e4f48e21ed
+An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+06/04/2014 14:43:12
+Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Bad Data.
+
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowCryptographicException(Int32)
+HResult : -2146893819
+Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
+   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+
+Additional Info:
+
+MachineName : KKIROV
+TimeStamp : 4.6.2014 г. 11:43:12
+FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/9/ROOT-6-130463557474872357
+ThreadIdentity : 
+WindowsIdentity : NT AUTHORITY\SYSTEM
+Requested URL : http://localhost:8093/Sitefinity/Content/full-module
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-6-130463557474872357
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:15240
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:48:34 AM
 
 Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
    at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
@@ -1683,20 +838,20 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-1-130461734247293836
+App Domain: /LM/W3SVC/9/ROOT-7-130463560860317111
 
-ProcessId: 8220
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:11100
+Win32 ThreadId:13188
 
 Extended Properties: 
 ----------------------------------------
 ----------------------------------------
-Timestamp: 6/2/2014 9:04:14 AM
+Timestamp: 6/4/2014 11:48:34 AM
 
 Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
 
@@ -1712,15 +867,374 @@ Title:
 
 Machine: KKIROV
 
-App Domain: /LM/W3SVC/9/ROOT-1-130461734247293836
+App Domain: /LM/W3SVC/9/ROOT-7-130463560860317111
 
-ProcessId: 8220
+ProcessId: 1640
 
 Process Name: c:\windows\system32\inetsrv\w3wp.exe
 
 Thread Name: 
 
-Win32 ThreadId:11100
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:49:12 AM
+
+Message: HandlingInstanceID: 58457de9-c326-4304-8621-bc31bbf6e208
+An exception of type 'System.UnauthorizedAccessException' occurred and was caught.
+----------------------------------------------------------------------------------
+06/04/2014 14:49:12
+Type : System.UnauthorizedAccessException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Authorization failed.
+Source : Unity_ILEmit_DynamicClasses
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void CommitTransaction()
+HResult : -2147024891
+Stack Trace :    at DynamicModule.ns.Wrapped_OpenAccessDynamicModuleProvider_6ee712e753124bf0ba935e438c52cd07.CommitTransaction()
+   at Telerik.Sitefinity.Data.ManagerBase`1.SaveChanges(String eventOrigin)
+   at Telerik.Sitefinity.DynamicModules.StrongTypes.Data.DynamicItemsRepositoryBase`1.Commit()
+   at SitefinityWebApp.Tests.TestCreateButton_Click(Object sender, EventArgs e) in d:\git\Telerik.Sitefinity.DynamicModules.StrongTypes\SitefinityWebApp\Tests.aspx.cs:line 84
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : KKIROV
+TimeStamp : 6/4/2014 11:49:12 AM
+FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/9/ROOT-7-130463560860317111
+ThreadIdentity : 
+WindowsIdentity : NT AUTHORITY\SYSTEM
+Requested URL : http://localhost:8093/Tests.aspx
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-7-130463560860317111
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:16604
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:51:49 AM
+
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-8-130463562654551591
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 11:51:49 AM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-8-130463562654551591
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 4.6.2014 г. 11:51:50
+
+Message: HandlingInstanceID: 011df945-c620-4c3c-a0e4-4474bca98faf
+An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+06/04/2014 14:51:50
+Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Bad Data.
+
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowCryptographicException(Int32)
+HResult : -2146893819
+Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
+   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+
+Additional Info:
+
+MachineName : KKIROV
+TimeStamp : 4.6.2014 г. 11:51:50
+FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/9/ROOT-8-130463562654551591
+ThreadIdentity : 
+WindowsIdentity : NT AUTHORITY\SYSTEM
+Requested URL : http://localhost:8093/home
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-8-130463562654551591
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:5104
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 12:08:12 PM
+
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-9-130463572485910259
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 12:08:12 PM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-9-130463572485910259
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 12:10:48 PM
+
+Message: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.2.179:80
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.WebClient.OpenRead(Uri address)
+   at Web.SitefinityExtensions.ClientAssetsCache.Caching.Helpers.WebHelper.GetTextFileContent(String url, ILogger logger)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-10-130463574046496918
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 12:10:48 PM
+
+Message: Client assets cache is not working. Reason: Version.txt file could not be found on the webassets application.
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-10-130463574046496918
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:13188
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2014 12:33:24 PM
+
+Message: HandlingInstanceID: d024a563-f45b-45a9-b1cd-4481fe02850d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/04/2014 15:33:23
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Request timed out.
+Source : 
+Help link : 
+WebEventCode : 3001
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : 
+HResult : -2147467259
+Stack Trace : The stack trace is unavailable.
+Additional Info:
+
+MachineName : KKIROV
+TimeStamp : 6/4/2014 12:33:24 PM
+FullName : Telerik.Sitefinity.Utilities, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/9/ROOT-10-130463574046496918
+ThreadIdentity : admin
+WindowsIdentity : NT AUTHORITY\SYSTEM
+Requested URL : http://localhost:8093/videos/default-source/default-video-library/3.mp4?sfvrsn=2
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: KKIROV
+
+App Domain: /LM/W3SVC/9/ROOT-10-130463574046496918
+
+ProcessId: 1640
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4208
 
 Extended Properties: 
 ----------------------------------------
