@@ -1,7 +1,7 @@
 Sitefnity Strong Types
 ======================
 
-** Telerik.Sitefinity.DynamicModules.StrongTypes ** is NuGet package which will add ** SitefinityDynamicTypes.tt ** to     the selected project. This file is T4 template which will generate strong types for all dynamic types in the sitefinity     project in the opened solution.
+**Telerik.Sitefinity.DynamicModules.StrongTypes** is NuGet package which will add **SitefinityDynamicTypes.tt** to     the selected project. This file is T4 template which will generate strong types for all dynamic types in the sitefinity     project in the opened solution.
 
 If you are not familiar with the T4 templates you could take a look [here](http://msdn.microsoft.com/en-us/library/bb126445.aspx) or [here](http://www.hanselman.com/blog/T4TextTemplateTransformationToolkitCodeGenerationBestKeptVisualStudioSecret.aspx).
 
