@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityWebApp", "Sitefin
 		{157550E8-C949-411D-917C-81D0B5B3A84E} = {157550E8-C949-411D-917C-81D0B5B3A84E}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityStringTypesGenerator", "SitefinityStringTypesGenerator\SitefinityStringTypesGenerator.csproj", "{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,12 @@ Global
 		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release Pro|Any CPU.Build.0 = Release Pro|Any CPU
 		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
+		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release Pro|Any CPU.Build.0 = Release|Any CPU
+		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
