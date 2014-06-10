@@ -15,6 +15,9 @@ using SitefinityWebApp.Relatedmodule.Data;
 using Telerik.Sitefinity.Modules.Libraries;
 using Telerik.Sitefinity.Taxonomies.Model;
 using Telerik.Sitefinity.Taxonomies;
+using SitefinityWebApp.Data;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Data;
+using Telerik.Sitefinity.DynamicModules.StrongTypes;
 
 namespace SitefinityWebApp
 {
@@ -27,8 +30,11 @@ namespace SitefinityWebApp
 
         protected void TestGetButton_Click(object sender, EventArgs e)
         {
-            FullItemDataRepository dataRepository = new FullItemDataRepository();
-            IList<FullItem> publishedItems = dataRepository.GetAll();
+            IDynamicItemsRepositoryBase repo = RepositoryResolver.Resolve(FullItem.DYNAMIC_TYPE_NAME);
+            repo.GetPublishedItems();
+
+            //FullItemDataRepository dataRepository = new FullItemDataRepository();
+            IList<DynamicTypeBase> publishedItems = repo.GetAll();
             int i = 0;
             foreach (var fullItem in publishedItems)
             {

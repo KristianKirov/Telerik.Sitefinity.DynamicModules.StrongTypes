@@ -109,6 +109,7 @@
     <Compile Include="Data\DynamicItemsRepositoryBase.cs" />
     <Compile Include="Data\DynamicTypeConverter.cs" />
     <Compile Include="Data\DynamicTypeFactory.cs" />
+    <Compile Include="Data\IDynamicItemsRepository.cs" />
     <Compile Include="Data\IDynamicTypeConverter.cs" />
     <Compile Include="Data\IDynamicTypeFactory.cs" />
     <Compile Include="DynamicTypeBase.cs" />

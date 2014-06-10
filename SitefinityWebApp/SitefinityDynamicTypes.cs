@@ -459,4 +459,22 @@ namespace SitefinityWebApp
 
     }
 
+    namespace Data
+    {
+        public static class RepositoryResolver
+        {
+            public static IDynamicItemsRepositoryBase Resolve(string dynamicTypeName)
+            {
+                switch (dynamicTypeName)
+                {
+                        case "Telerik.Sitefinity.DynamicTypes.Model.FullModule.FullItem":
+                        return new FullModule.Data.FullItemDataRepository();
+                        case "Telerik.Sitefinity.DynamicTypes.Model.Relatedmodule.RelatedItem":
+                        return new Relatedmodule.Data.RelatedItemDataRepository();
+                    }
+                
+                return null;
+            }
+        }
+    }
 }
