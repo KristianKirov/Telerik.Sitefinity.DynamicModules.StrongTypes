@@ -15,7 +15,7 @@ using Telerik.Sitefinity.Lifecycle;
 
 namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 {
-    public abstract class DynamicItemsRepositoryBase<T> where T : DynamicTypeBase, new()
+    public abstract class DynamicItemsRepositoryBase<T> : IDynamicItemsRepositoryBase where T : DynamicTypeBase, new()
     {
         private readonly DynamicModuleManager manager;
         private readonly Type itemType;
@@ -223,6 +223,77 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
             DynamicContent masterItem = (DynamicContent)this.Manager.Lifecycle.GetMaster(originalItem.DynamicContent);
 
             return this.Typify(masterItem);
+        }
+
+
+        DynamicTypeBase IDynamicItemsRepositoryBase.Create()
+        {
+            return this.Create();
+        }
+
+        DynamicTypeBase IDynamicItemsRepositoryBase.Create(Guid itemId)
+        {
+            return this.Create(itemId);
+        }
+
+        public void Delete(DynamicTypeBase item)
+        {
+            this.Delete(item);
+        }
+
+        IList<DynamicTypeBase> IDynamicItemsRepositoryBase.GetAll()
+        {
+            return this.GetAll().Cast<DynamicTypeBase>().ToList();
+        }
+
+        public DynamicTypeBase GetEditableItem(DynamicTypeBase originalItem)
+        {
+            return this.GetEditableItem(originalItem);
+        }
+
+        DynamicTypeBase IDynamicItemsRepositoryBase.GetItemById(Guid id)
+        {
+            return this.GetItemById(id);
+        }
+
+        DynamicTypeBase IDynamicItemsRepositoryBase.GetItemByUrlName(string urlName)
+        {
+            return this.GetItemByUrlName(urlName);
+        }
+
+        DynamicTypeBase IDynamicItemsRepositoryBase.GetItemFromUrl(string url, bool published)
+        {
+            return this.GetItemFromUrl(url, published);
+        }
+
+        IList<DynamicTypeBase> IDynamicItemsRepositoryBase.GetItemsForEdit()
+        {
+            return this.GetItemsForEdit().Cast<DynamicTypeBase>().ToList();
+        }
+
+        IList<DynamicTypeBase> IDynamicItemsRepositoryBase.GetPublishedItems()
+        {
+            return this.GetPublishedItems().Cast<DynamicTypeBase>().ToList();
+        }
+
+        public void MarkAsDraft(DynamicTypeBase item)
+        {
+            this.MarkAsDraft(item);
+        }
+
+        public void Publish(DynamicTypeBase item)
+        {
+            this.Publish(item);
+        }
+
+        public void SchedulePublish(DynamicTypeBase item, DateTime publishDate)
+        {
+            this.SchedulePublish(item, publishDate);
+        }
+
+        public void Unpublish(DynamicTypeBase item)
+        {
+            this.Unpublish(item);
         }
     }
 }

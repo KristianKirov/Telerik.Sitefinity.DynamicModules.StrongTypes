@@ -224,6 +224,26 @@ set
     }
 <#    } #>
 
+    namespace Data
+    {
+        public static class RepositoryResolver
+        {
+            public static IDynamicItemsRepositoryBase Resolve(string dynamicTypeName)
+            {
+                switch (dynamicTypeName)
+                {
+    <#    foreach (DynamicTypeModel dynamicType in DynamicTypes)
+    { #>
+                    case "<#= dynamicType.SitefinityTypeName #>":
+                        return new <#= dynamicType.Namespace #>.Data.<#= dynamicType.Name #>DataRepository();
+    <#
+    } #>
+                }
+                
+                return null;
+            }
+        }
+    }
 }
 <#+
 
