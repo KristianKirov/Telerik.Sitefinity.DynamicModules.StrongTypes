@@ -5,8 +5,8 @@ using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.Model.ContentLinks;
 using Telerik.Sitefinity.GeoLocations.Model;
 using Telerik.Sitefinity.Libraries.Model;
-using Telerik.Sitefinity.DynamicModules.StrongTypes;
-using Telerik.Sitefinity.DynamicModules.StrongTypes.Data;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Core;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Core.Data;
 
 namespace SitefinityWebApp
 {
@@ -19,6 +19,14 @@ namespace SitefinityWebApp
             
             public FullItem()
             {
+            }
+
+            protected override string MainShortTextFieldName
+            {
+                get
+                {
+                    return FullItem.MAIN_SHORT_TEXT_FIELD_NAME;
+                }
             }
 
             private const string SHORTTEXT_FIELD_NAME = "ShortText";
@@ -393,6 +401,14 @@ namespace SitefinityWebApp
             
             public RelatedItem()
             {
+            }
+
+            protected override string MainShortTextFieldName
+            {
+                get
+                {
+                    return RelatedItem.MAIN_SHORT_TEXT_FIELD_NAME;
+                }
             }
 
             private const string TITLE_FIELD_NAME = "Title";

@@ -1,0 +1,2 @@
+Run:
+nuget pack Telerik.Sitefinity.DynamicModules.StrongTypes.Core.csproj -Prop Configuration=Release

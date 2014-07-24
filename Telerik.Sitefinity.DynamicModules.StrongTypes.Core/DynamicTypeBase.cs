@@ -5,16 +5,16 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.DynamicModules.Model;
-using Telerik.Sitefinity.DynamicModules.StrongTypes.Data;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Core.Data;
 using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Libraries.Model;
 using Telerik.Sitefinity.Lifecycle;
 using Telerik.Sitefinity.Model;
 using Telerik.Sitefinity.RelatedData;
 
-namespace Telerik.Sitefinity.DynamicModules.StrongTypes
+namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Core
 {
-    public class DynamicTypeBase
+    public abstract class DynamicTypeBase
     {
         protected internal DynamicContent DynamicContent { get; private set; }
 
@@ -349,6 +349,13 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes
         private string TransformToUrl(string text)
         {
             return Regex.Replace(text.ToLowerInvariant(), @"[^\w\-\!\$\'\(\)\=\@\d_]+", "-");
+        }
+
+        protected abstract string MainShortTextFieldName { get; }
+
+        public Lstring GetMainShortTextFieldValue()
+        {
+            return this.GetDynamicFieldValue<Lstring>(this.MainShortTextFieldName);
         }
     }
 }

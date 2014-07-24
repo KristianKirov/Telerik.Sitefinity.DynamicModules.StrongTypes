@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityWebApp", "Sitefin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityStringTypesGenerator", "SitefinityStringTypesGenerator\SitefinityStringTypesGenerator.csproj", "{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.DynamicModules.StrongTypes.Core", "Telerik.Sitefinity.DynamicModules.StrongTypes.Core\Telerik.Sitefinity.DynamicModules.StrongTypes.Core.csproj", "{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,12 @@ Global
 		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release Pro|Any CPU.Build.0 = Release|Any CPU
 		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21AA94D9-22F0-4D20-A04B-A2D20A5F8FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
+		{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}.Release Pro|Any CPU.Build.0 = Release|Any CPU
+		{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DA54FB-2F75-46BE-8DF7-3840E414E4F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

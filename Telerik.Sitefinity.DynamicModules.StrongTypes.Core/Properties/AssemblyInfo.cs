@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Telerik.Sitefinity.DynamicModules.StrongTypes")]
-[assembly: AssemblyDescription("Builds strong type for each dynamic type in your sitefinity project using T4 templates")]
+[assembly: AssemblyTitle("Telerik.Sitefinity.DynamicModules.StrongTypes.Core")]
+[assembly: AssemblyDescription("Core assemblies for Telerik.Sitefinity.DynamicModules.StrongTypes package")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kristian Kirov")]
-[assembly: AssemblyProduct("Telerik.Sitefinity.DynamicModules.StrongTypes")]
+[assembly: AssemblyProduct("Telerik.Sitefinity.DynamicModules.StrongTypes.Core")]
 [assembly: AssemblyCopyright("Copyright © Kristian Kirov 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("13c640de-bfcf-4ab0-ab9c-e7e73e0113bc")]
+[assembly: Guid("d87d9f7e-cbca-482c-87d4-775080121b85")]
 
 // Version information for an assembly consists of the following four values:
 //

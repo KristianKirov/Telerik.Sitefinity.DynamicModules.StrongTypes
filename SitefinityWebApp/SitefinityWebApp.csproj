@@ -370,9 +370,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Telerik.Sitefinity.DropboxLibraries.7.0.5100.0\lib\net40\Telerik.Sitefinity.DropboxLibraries.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Sitefinity.DynamicModules.StrongTypes, Version=7.0.5100.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Telerik.Sitefinity.DynamicModules.StrongTypes, Version=7.0.5100.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Telerik.Sitefinity.DynamicModules.StrongTypes.7.0.5100.0\lib\net45\Telerik.Sitefinity.DynamicModules.StrongTypes.dll</HintPath>
+      <HintPath>..\packages\Telerik.Sitefinity.DynamicModules.StrongTypes.7.0.5100.2\lib\net45\Telerik.Sitefinity.DynamicModules.StrongTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.DynamicModules.StrongTypes.Core">
+      <HintPath>..\packages\Telerik.Sitefinity.DynamicModules.StrongTypes.Core.7.0.5100.2\lib\net45\Telerik.Sitefinity.DynamicModules.StrongTypes.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Sitefinity.Ecommerce, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -759,7 +762,6 @@
     <Content Include="App_Data\Sitefinity\Configuration\WorkflowConfig.config" />
     <Content Include="App_Data\Sitefinity\Sitefinity.lic" />
     <None Include="Properties\PublishProfiles\tempp.pubxml" />
-    <Content Include="UpdatePackage.ps1" />
     <Content Include="SitefinityDynamicTypes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SitefinityDynamicTypes.cs</LastGenOutput>
@@ -812,7 +814,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>ECHO Updating Telerik.Sitefinity.DynamicModules.StrongTypes package
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "&amp; '$(ProjectDir)UpdatePackage.ps1'"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>

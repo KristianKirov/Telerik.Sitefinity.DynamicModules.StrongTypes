@@ -13,7 +13,7 @@ using Telerik.Sitefinity.Data.OA;
 using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Lifecycle;
 
-namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
+namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Core.Data
 {
     public abstract class DynamicItemsRepositoryBase<T> : IDynamicItemsRepositoryBase where T : DynamicTypeBase, new()
     {
@@ -184,7 +184,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
             DynamicContent dynamicItem = this.GetAllUntyped().FirstOrDefault(dc => dc.Id == id);
             if (dynamicItem == null)
             {
-                return null;
+                return default(T);
             }
 
             return this.Typify(dynamicItem);
@@ -192,13 +192,20 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
 
         public T GetItemByUrlName(string urlName)
         {
-            DynamicContent dynamicItem = this.GetAllUntyped().FirstOrDefault(dc => dc.UrlName == urlName);
+            DynamicContent dynamicItem = this.GetUntypedPublishedItems().FirstOrDefault(dc => dc.UrlName == urlName);
             if (dynamicItem == null)
             {
-                return null;
+                return default(T);
             }
 
             return this.Typify(dynamicItem);
+        }
+
+        public IList<T> GetItemsByUrlNames(params string[] urlNames)
+        {
+            IQueryable<DynamicContent> dynamicItems = this.GetUntypedPublishedItems().Where(dc => urlNames.Contains((string)dc.UrlName));
+
+            return this.Typify(dynamicItems);
         }
 
         public T GetItemFromUrl(string url, bool published)
@@ -207,7 +214,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
             DynamicContent dynamicItem = this.Manager.Provider.GetItemFromUrl(this.ItemType, url, published, out defaultUrl) as DynamicContent;
             if (dynamicItem == null)
             {
-                return null;
+                return default(T);
             }
 
             return this.Typify(dynamicItem);
@@ -259,6 +266,11 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
         DynamicTypeBase IDynamicItemsRepositoryBase.GetItemByUrlName(string urlName)
         {
             return this.GetItemByUrlName(urlName);
+        }
+
+        IList<DynamicTypeBase> IDynamicItemsRepositoryBase.GetItemsByUrlNames(params string[] urlNames)
+        {
+            return this.GetItemsByUrlNames(urlNames).Cast<DynamicTypeBase>().ToList();
         }
 
         DynamicTypeBase IDynamicItemsRepositoryBase.GetItemFromUrl(string url, bool published)

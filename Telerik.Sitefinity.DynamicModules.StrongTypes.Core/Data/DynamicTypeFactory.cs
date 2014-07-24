@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.Security;
 
-namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
+namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Core.Data
 {
     public class DynamicTypeFactory<T> : IDynamicTypeFactory<T> where T : DynamicTypeBase, new()
     {
@@ -33,7 +33,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
         public T CreateItem(Guid id)
         {
             DynamicContent dynamicItem = this.CreateItemInternal(id);
-            
+
             T newItem = this.BuildTypedItem(dynamicItem);
 
             return newItem;
@@ -50,7 +50,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
             {
                 newItem = this.manager.CreateDataItem(this.itemType);
             }
-            
+
             newItem.Owner = SecurityManager.GetCurrentUserId();
             newItem.PublicationDate = DateTime.UtcNow;
             newItem.SetWorkflowStatus(this.manager.Provider.ApplicationName, "Draft");

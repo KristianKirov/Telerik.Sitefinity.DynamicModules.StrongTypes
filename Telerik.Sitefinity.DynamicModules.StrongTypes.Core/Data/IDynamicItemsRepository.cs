@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Core.Data
 {
     public interface IDynamicItemsRepositoryBase
     {
@@ -14,6 +18,7 @@ namespace Telerik.Sitefinity.DynamicModules.StrongTypes.Data
         DynamicTypeBase GetItemById(Guid id);
         DynamicTypeBase GetItemByUrlName(string urlName);
         DynamicTypeBase GetItemFromUrl(string url, bool published);
+        IList<DynamicTypeBase> GetItemsByUrlNames(params string[] urlNames);
         IList<DynamicTypeBase> GetItemsForEdit();
         IList<DynamicTypeBase> GetPublishedItems();
         string ItemTypeName { get; }

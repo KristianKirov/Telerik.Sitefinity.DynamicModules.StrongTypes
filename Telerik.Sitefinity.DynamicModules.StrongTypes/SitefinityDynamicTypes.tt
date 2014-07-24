@@ -27,8 +27,8 @@ using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.Model.ContentLinks;
 using Telerik.Sitefinity.GeoLocations.Model;
 using Telerik.Sitefinity.Libraries.Model;
-using Telerik.Sitefinity.DynamicModules.StrongTypes;
-using Telerik.Sitefinity.DynamicModules.StrongTypes.Data;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Core;
+using Telerik.Sitefinity.DynamicModules.StrongTypes.Core.Data;
 
 namespace <#= DefaultNamespace #>
 {
@@ -43,6 +43,14 @@ namespace <#= DefaultNamespace #>
             
             public <#= dynamicType.Name #>()
             {
+            }
+
+            protected override string MainShortTextFieldName
+            {
+                get
+                {
+                    return <#= dynamicType.Name #>.MAIN_SHORT_TEXT_FIELD_NAME;
+                }
             }
 
     <# foreach (DynamicTypeFieldModel field in dynamicType.Fields)
